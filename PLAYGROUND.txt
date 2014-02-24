@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Cambios realizados por Fernando. 
+=======
+Tercer cambio
+>>>>>>> branch 'master' of https://github.com/Arquisoft/ObservaTerra32.git
