@@ -4,15 +4,15 @@ ObservaTerra 3.2
 Repositorio de la asignatura de Arquitectura del Software para el desarrollo del proyecto del 2014.
 Miembros del grupo: 
 
-Pablo Bravo
+Pablo Bravo Mediavilla
 
-Álvaro Panizo
+Álvaro Panizo Romano
 
-Paula Rodríguez
+Paula Rodríguez Parrondo
 
-Luis Ángel Rodríguez
+Luis Ángel Rodríguez García
 
-Fernando Vigil-Escalera
+Fernando Vigil-Escalera Caicoya
 
 
 =============
