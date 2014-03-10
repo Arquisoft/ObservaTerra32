@@ -13,6 +13,8 @@ private int seats;
 /** Individual price of each seat. */
 private double pricePerSeat;
 
+
+//Prueba
 /**
  * @param seats Number of seats
  * @param pricePerSeat Price of each seat
