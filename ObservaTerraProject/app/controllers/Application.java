@@ -13,6 +13,23 @@ public class Application extends Controller {
     public static Result index() {
         return ok(index.render());
     }
+    
+    public static Result noticias() {
+        return ok(noticias.render());
+    }
+    
+    public static Result documentos() {
+        return ok(documentos.render());
+    }
+    
+    public static Result videos() {
+        return ok(videos.render());
+    }
+    
+    public static Result enlaces() {
+        return ok(enlaces.render());
+    }
+    
 
     public static Result showCountries() {
         return 
