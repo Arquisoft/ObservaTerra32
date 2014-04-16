@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -49,7 +51,7 @@ public class User extends Model {
 	}
 
 	public static void create(User user) {
-		if (User.findByName(user.name) == null) {
+		if (User.findById(user.name) == null) {
 			user.save();
 		}
 	}

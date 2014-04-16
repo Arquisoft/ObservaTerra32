@@ -1,9 +1,9 @@
 package models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import com.avaje.ebean.Ebean;
 
 import play.db.ebean.Model;
 
@@ -21,7 +21,7 @@ public class Provider extends Model {
 		return name;
 	}
 	
-	public static Finder<String, Country> find = new Finder(String.class,
+	public static Finder<String, Provider> find = new Finder(String.class,
 			Provider.class);
 
 	public static List<Provider> all() {
