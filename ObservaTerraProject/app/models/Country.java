@@ -3,7 +3,6 @@ package models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.*;
@@ -13,6 +12,8 @@ import play.libs.Json;
 
 @Entity
 public class Country extends Model {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	public String code;

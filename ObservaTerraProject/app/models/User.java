@@ -12,12 +12,16 @@ import play.db.ebean.Model;
 @Entity
 public class User extends Model {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String id;
 
 	private String name;
 	private String surname;
 	private String password;
+	
+	private List<Organization> userOrganizations;
 	
 
 	public User(String id, String name, String surname, String password) {
@@ -67,6 +71,22 @@ public class User extends Model {
 
 	public static User findById(String id) {
 		return find.byId(id);
+	}
+
+	public List<Organization> getUserOrganizations() {
+		return userOrganizations;
+	}
+
+	public void setUserOrganizations(List<Organization> userOrganizations) {
+		this.userOrganizations = userOrganizations;
+	}
+	
+	public void addUserOrganization(Organization organization){
+		userOrganizations.add(organization);
+	}
+	
+	public void deleteUserOrganization(Organization organization){
+		userOrganizations.remove(organization);
 	}
 
 }

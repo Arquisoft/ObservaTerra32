@@ -3,15 +3,13 @@ package models;
 import java.sql.Time;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
-
-import com.avaje.ebean.Ebean;
 
 import play.db.ebean.Model;
 
 @Entity
 public class IntervalTime extends Model {
 
+	private static final long serialVersionUID = 1L;
 	private Time begin;
 	private Time finish;
 

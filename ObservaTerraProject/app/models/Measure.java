@@ -1,15 +1,13 @@
 package models;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
-
-import com.avaje.ebean.Ebean;
 
 import play.db.ebean.Model;
 
 @Entity
 public class Measure extends Model {
 
+	private static final long serialVersionUID = 1L;
 	private String name;
 
 	public Measure(String name) {
