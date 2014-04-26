@@ -1,0 +1,58 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/template-general.xhtml">
+
+	<ui:define name="titulo">
+    	#{msgs.modificacionAsignatura}
+	</ui:define>
+
+	<ui:define name="menu">
+		<h:form id="form-menu">
+			<h:commandLink value="#{msgs.enlaceAtras}"
+				action="/mantenimientoAsignaturas.xhtml" />
+		</h:form>
+	</ui:define>
+
+	<ui:define name="cuerpo">
+		<h:form id="form-principal">
+			<h:panelGrid columns="2" styleClass="formTable">
+  				#{msgs.nombre} 
+  				<h:panelGroup>
+					<h:inputText value="#{asignaturas.asignatura.nombre}"
+						required="true" id="nombre"
+						requiredMessage="#{msgs.nombreRegistro}" />
+						<h:message for="nombre" />
+				</h:panelGroup>
+
+				#{msgs.curso} 
+				<h:panelGroup>
+					<h:inputText value="#{asignaturas.asignatura.curso}"
+						required="true" id="curso"
+						requiredMessage="#{msgs.cursoRegistro}" />
+						<h:message for="curso" />
+				</h:panelGroup>
+
+				#{msgs.numeroCreditos}
+				<h:panelGroup>
+					<h:inputText value="#{asignaturas.asignatura.numeroCreditos}"
+						required="true" id="numeroCreditos"
+						requiredMessage="#{msgs.numeroCreditosRegistro}" />
+						<h:message for="numeroCreditos" />
+				</h:panelGroup>
+
+				<center>
+					<h:commandButton value="#{msgs.modificarAsignatura}"
+						action="#{asignaturas.modificarAsignatura}">
+					</h:commandButton>
+				</center>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+
+	<ui:define name="pie">
+		<ui:include src="/snippets/pie-idiomas-casa.xhtml" />
+	</ui:define>
+
+</ui:composition>

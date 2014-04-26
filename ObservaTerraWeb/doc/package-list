@@ -1,0 +1,15 @@
+com.sdi.business
+com.sdi.business.exception
+com.sdi.infrastructure
+com.sdi.model
+com.sdi.persistence
+com.sdi.persistence.exception
+com.sdi.presentation
+com.sdi.presentation.listener
+impl.sdi.business
+impl.sdi.business.classes
+impl.sdi.business.classes.administrador
+impl.sdi.business.classes.alumno
+impl.sdi.business.classes.profesor
+impl.sdi.business.classes.publico
+impl.sdi.persistence

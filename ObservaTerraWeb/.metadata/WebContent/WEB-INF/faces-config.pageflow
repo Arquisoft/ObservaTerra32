@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf139670911109120" configfile="/VigilEscaleraCaicoyaFernando/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="122" y="178" id="pf139670916017223" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="eliminarAsignatura.xhtml" x="122" y="562" id="pf139672050040842" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" path="/eliminarAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="errorEliminarAsignatura.xhtml" x="122" y="947" id="pf13967342899972" referenceLink="//@navigationRule.4/@navigationCase.3/@toViewId|" path="/errorEliminarAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="exitoNuevaAsignatura.xhtml" x="122" y="1332" id="pf139674080794110" referenceLink="//@navigationRule.4/@navigationCase.2/@toViewId|" path="/exitoNuevaAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuariosDesactivados.xhtml" x="554" y="1739" id="pf13967823673072" referenceLink="//@navigationRule.12/@fromViewId|" outlinks="pf13970049190712 pf13970315538260" inlinks="pf139695546474429 pf139695546474430 pf13970049190712" path="/usuariosDesactivados.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="1718" id="pf139695546474431" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf139695546474432 pf139695546474433 pf139695546474434 pf139695546474435 pf139695546474436 pf139695546474437 pf139695546474438 pf139695546474429 pf139695546474439 pf139695546474440" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="asignarProfesoresAsignatura.xhtml" x="338" y="727" id="pf139695546474441" referenceLink="//@navigationRule.0/@navigationCase.9/@toViewId|" inlinks="pf139695546474432 pf139695546474440" path="/asignarProfesoresAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="activacionUsuarios.xhtml" x="338" y="1111" id="pf139695546474442" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf139695546474433" path="/activacionUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modificarPerfilRegistradoAdministrador.xhtml" x="338" y="5014" id="pf139695546474443" referenceLink="//@navigationRule.10/@navigationCase.1/@toViewId|" outlinks="pf139695546474444 pf139695546474445" inlinks="pf139695546474434 pf139695546474446 pf139695546474445" path="/modificarPerfilRegistradoAdministrador.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="mantenimientoAsignaturas.xhtml" x="554" y="2507" id="pf139695546474447" referenceLink="//@navigationRule.17/@navigationCase.0/@toViewId|" outlinks="pf139695546474448 pf139695546474449 pf13970017915810 pf13970017915811 pf13970459481160" inlinks="pf139695546474435 pf139695546474450 pf139695546474451 pf139695546474452 pf13970017915810 pf13970017915811 pf13970459481160" path="/mantenimientoAsignaturas.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="mantenimientoUsuarios.xhtml" x="338" y="1495" id="pf139695546474454" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" outlinks="pf139695546474430 pf139695546474455" inlinks="pf139695546474436 pf13970315538261" path="/mantenimientoUsuarios.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modificarAsignatura.xhtml" x="338" y="1921" id="pf139695546474456" referenceLink="//@navigationRule.17/@fromViewId|" outlinks="pf139695546474452 pf139695546474457" inlinks="pf139695546474437 pf139695546474448" path="/modificarAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="nuevaAsignatura.xhtml" x="338" y="2305" id="pf139695546474458" referenceLink="//@navigationRule.16/@fromViewId|" outlinks="pf139695546474451" inlinks="pf139695546474438 pf139695546474449" path="/nuevaAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuariosActivados.xhtml" x="554" y="1355" id="pf139695546474459" referenceLink="//@navigationRule.13/@fromViewId|" outlinks="pf139695546474460 pf13970057893713" inlinks="pf139695546474439 pf139695546474455 pf139695546474460" path="/usuariosActivados.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="2902" id="pf139695546474461" referenceLink="//@navigationRule.1/@navigationCase.2/@toViewId|" outlinks="pf139695546474462 pf139695546474463 pf139695546474464" inlinks="pf139695546474464" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="asignaturas.xhtml" x="338" y="2710" id="pf139695546474465" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf139695546474466" inlinks="pf139695546474462 pf139695546474466" path="/asignaturas.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="profesores.xhtml" x="338" y="3094" id="pf139695546474567" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf139695546474568" inlinks="pf139695546474463 pf139695546474568" path="/profesores.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="registro.xhtml" x="122" y="3670" id="pf139695546474569" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf139695546474570 pf139695546474571" path="/registro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="exitoRegistro.xhtml" x="338" y="3478" id="pf139695546474572" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf139695546474570" path="/exitoRegistro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="errorRegistro.xhtml" x="338" y="3862" id="pf139695546474573" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" inlinks="pf139695546474571" path="/errorRegistro.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuarioAdministrador.xhtml" x="122" y="5116" id="pf139695546474574" referenceLink="//@navigationRule.10/@navigationCase.0/@toViewId|" outlinks="pf139695546474450 pf139695546474446 pf13969898615700 pf13969973538237" inlinks="pf139695546474444" path="/usuarioAdministrador.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="errorModificarAsignatura.xhtml" x="554" y="2123" id="pf139695546474575" referenceLink="//@navigationRule.17/@navigationCase.1/@toViewId|" inlinks="pf139695546474457" path="/errorModificarAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuarioProfesor.xhtml" x="122" y="4246" id="pf139695546474576" referenceLink="//@navigationRule.19/@navigationCase.0/@toViewId|" outlinks="pf139695546474577 pf139695546474578" inlinks="pf139695546474579" path="/usuarioProfesor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modificarPerfilRegistradoProfesor.xhtml" x="338" y="4246" id="pf139695546474580" referenceLink="//@navigationRule.19/@navigationCase.1/@toViewId|" outlinks="pf139695546474579 pf139695546474581" inlinks="pf139695546474577 pf139695546474581" path="/modificarPerfilRegistradoProfesor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="calificarAlumnos.xhtml" x="338" y="4630" id="pf139695546474582" referenceLink="//@navigationRule.21/@navigationCase.0/@toViewId|" outlinks="pf139695546474583" inlinks="pf139695546474578 pf139695546474584" path="/calificarAlumnos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="formularioCalificarAlumno.xhtml" x="122" y="4630" id="pf139695546474585" referenceLink="//@navigationRule.21/@fromViewId|" outlinks="pf139695546474584" inlinks="pf139695546474583" path="/formularioCalificarAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuarioAlumno.xhtml" x="338" y="5500" id="pf139695546474586" referenceLink="//@navigationRule.23/@navigationCase.0/@toViewId|" outlinks="pf139695546474587 pf139695546474588" inlinks="pf139695546474589" path="/usuarioAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="expediente.xhtml" x="554" y="5500" id="pf139695546474590" referenceLink="//@navigationRule.22/@navigationCase.0/@toViewId|" inlinks="pf139695546474587" path="/expediente.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modificarPerfilRegistradoAlumno.xhtml" x="122" y="5500" id="pf139695546474591" referenceLink="//@navigationRule.23/@navigationCase.1/@toViewId|" outlinks="pf139695546474589 pf139695546474592" inlinks="pf139695546474588 pf139695546474592" path="/modificarPerfilRegistradoAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarAsignarProfesoradoAsignatura.xhtml" x="338" y="5884" id="pf13969898615712" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf13969898615713" inlinks="pf13969898615700 pf13969925564316" path="/listarAsignarProfesoradoAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="asignarProfesor.xhtml" x="122" y="5884" id="pf13969898615714" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf13969925564316" inlinks="pf13969898615713" path="/asignarProfesor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listarAsignarAlumnadoAsignatura.xhtml" x="338" y="6268" id="pf13969973538238" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" outlinks="pf13969973538239" inlinks="pf13969973538237 pf139699735382310" path="/listarAsignarAlumnadoAsignatura.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="asignarAlumno.xhtml" x="122" y="6268" id="pf139699735382311" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf139699735382310" inlinks="pf13969973538239" path="/asignarAlumno.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="formularioModificarUsuarioActivacion.xhtml" x="770" y="1349" id="pf13970057893724" referenceLink="//@navigationRule.14/@navigationCase.1/@toViewId|" outlinks="pf13970315538261 pf13970315538282" inlinks="pf13970057893713 pf13970315538260 pf13970315538282" path="/formularioModificarUsuarioActivacion.xhtml"/>
+  <links id="pf139695546474432" target="pf139695546474441" source="pf139695546474431"/>
+  <links id="pf139695546474433" target="pf139695546474442" source="pf139695546474431"/>
+  <links id="pf139695546474434" target="pf139695546474443" source="pf139695546474431"/>
+  <links id="pf139695546474435" target="pf139695546474447" source="pf139695546474431"/>
+  <links id="pf139695546474436" target="pf139695546474454" source="pf139695546474431"/>
+  <links id="pf139695546474437" target="pf139695546474456" source="pf139695546474431"/>
+  <links id="pf139695546474438" target="pf139695546474458" source="pf139695546474431"/>
+  <links id="pf139695546474429" target="pf13967823673072" source="pf139695546474431"/>
+  <links id="pf139695546474439" target="pf139695546474459" source="pf139695546474431"/>
+  <links id="pf139695546474440" target="pf139695546474441" source="pf139695546474431"/>
+  <links id="pf139695546474462" target="pf139695546474465" source="pf139695546474461"/>
+  <links id="pf139695546474463" target="pf139695546474567" source="pf139695546474461"/>
+  <links id="pf139695546474570" target="pf139695546474572" source="pf139695546474569"/>
+  <links id="pf139695546474571" target="pf139695546474573" source="pf139695546474569"/>
+  <links id="pf139695546474450" target="pf139695546474447" source="pf139695546474574"/>
+  <links id="pf139695546474446" target="pf139695546474443" source="pf139695546474574"/>
+  <links id="pf139695546474444" target="pf139695546474574" source="pf139695546474443"/>
+  <links id="pf139695546474430" target="pf13967823673072" source="pf139695546474454"/>
+  <links id="pf139695546474455" target="pf139695546474459" source="pf139695546474454"/>
+  <links id="pf139695546474448" target="pf139695546474456" source="pf139695546474447"/>
+  <links id="pf139695546474449" target="pf139695546474458" source="pf139695546474447"/>
+  <links id="pf139695546474451" target="pf139695546474447" source="pf139695546474458"/>
+  <links id="pf139695546474452" target="pf139695546474447" source="pf139695546474456"/>
+  <links id="pf139695546474457" target="pf139695546474575" source="pf139695546474456"/>
+  <links id="pf139695546474577" target="pf139695546474580" source="pf139695546474576"/>
+  <links id="pf139695546474578" target="pf139695546474582" source="pf139695546474576"/>
+  <links id="pf139695546474579" target="pf139695546474576" source="pf139695546474580"/>
+  <links id="pf139695546474583" target="pf139695546474585" source="pf139695546474582"/>
+  <links id="pf139695546474584" target="pf139695546474582" source="pf139695546474585"/>
+  <links id="pf139695546474587" target="pf139695546474590" source="pf139695546474586"/>
+  <links id="pf139695546474588" target="pf139695546474591" source="pf139695546474586"/>
+  <links id="pf139695546474589" target="pf139695546474586" source="pf139695546474591"/>
+  <links id="pf13969898615700" target="pf13969898615712" source="pf139695546474574"/>
+  <links id="pf13969898615713" target="pf13969898615714" source="pf13969898615712"/>
+  <links id="pf13969925564316" target="pf13969898615712" source="pf13969898615714"/>
+  <links id="pf13969973538237" target="pf13969973538238" source="pf139695546474574"/>
+  <links id="pf13969973538239" target="pf139699735382311" source="pf13969973538238"/>
+  <links id="pf139699735382310" target="pf13969973538238" source="pf139699735382311"/>
+  <links id="pf13970057893713" target="pf13970057893724" source="pf139695546474459"/>
+  <links id="pf13970315538260" target="pf13970057893724" source="pf13967823673072"/>
+  <links id="pf13970315538261" target="pf139695546474454" source="pf13970057893724"/>
+  <links id="pf139695546474464" target="pf139695546474461" source="pf139695546474461">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474445" target="pf139695546474443" source="pf139695546474443">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474460" target="pf139695546474459" source="pf139695546474459">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474466" target="pf139695546474465" source="pf139695546474465">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474568" target="pf139695546474567" source="pf139695546474567">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474581" target="pf139695546474580" source="pf139695546474580">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf139695546474592" target="pf139695546474591" source="pf139695546474591">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13970017915810" target="pf139695546474447" source="pf139695546474447">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13970017915811" target="pf139695546474447" source="pf139695546474447">
+    <bendPoints d1Height="-66" d2Height="-66"/>
+    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
+    <bendPoints d1Width="-94" d2Width="-94"/>
+  </links>
+  <links id="pf13970049190712" target="pf13967823673072" source="pf13967823673072">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13970315538282" target="pf13970057893724" source="pf13970057893724">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13970459481160" target="pf139695546474447" source="pf139695546474447">
+    <bendPoints d1Height="-96" d2Height="-96"/>
+    <bendPoints d1Width="-124" d1Height="-96" d2Width="-124" d2Height="-96"/>
+    <bendPoints d1Width="-124" d2Width="-124"/>
+  </links>
+</pageflow:Pageflow>

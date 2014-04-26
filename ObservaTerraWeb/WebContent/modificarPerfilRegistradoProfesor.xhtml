@@ -1,0 +1,93 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/template-general.xhtml">
+
+	<ui:define name="titulo">
+    	#{msgs.registro}
+	</ui:define>
+
+	<ui:define name="menu">
+		<h:form id="form-menu">
+			<h:commandLink value="#{msgs.enlaceAtras}"
+				action="/usuarioProfesor.xhtml" />
+		</h:form>
+	</ui:define>
+
+	<ui:define name="cuerpo">
+		<h:form id="form-principal">
+
+			<h:panelGrid columns="2" styleClass="formTable">
+  				#{msgs.nombre} 
+  				<h:panelGroup>
+					<h:inputText value="#{usuarios.usuario.nombre}" required="true"
+						requiredMessage="#{msgs.nombreRegistro}"
+						validatorMessage="#{msgs.nombreRegistroValidador}" id="nombre">
+						<f:validateLength maximum="20" />
+					</h:inputText>
+					<h:message for="nombre" />
+				</h:panelGroup>
+
+				#{msgs.apellidos} 
+				<h:panelGroup>
+					<h:inputText value="#{usuarios.usuario.apellidos}" required="true"
+						requiredMessage="#{msgs.apellidosRegistro}"
+						validatorMessage="#{msgs.apellidosRegistroValidador}"
+						id="apellidos">
+						<f:validateLength maximum="40" />
+					</h:inputText>
+					<h:message for="apellidos" />
+				</h:panelGroup>
+
+				#{msgs.email}
+				<h:panelGroup>
+					<h:inputText value="#{usuarios.usuario.email}" required="true"
+						requiredMessage="#{msgs.emailRegistro}"
+						validatorMessage="#{msgs.emailRegistroValidador}" id="email">
+						<f:validateRegex pattern=".+@.+\.[a-z]+" />
+					</h:inputText>
+					<h:message for="email" />
+				</h:panelGroup>
+
+				#{msgs.passwordAntigua}
+				<h:panelGroup>
+					<h:inputSecret value="#{usuarios.usuario.password}" required="true"
+						id="password">
+					</h:inputSecret>
+					<h:message for="password" />
+				</h:panelGroup>
+
+				#{msgs.passwordNueva}
+				<h:panelGroup>
+					<h:inputSecret value="#{usuarios.nuevaPassword}" required="true"
+						id="nuevaPassword">
+					</h:inputSecret>
+					<h:message for="nuevaPassword}" />
+				</h:panelGroup>
+				
+				#{msgs.confirmarPasswordNueva}
+				<h:panelGroup>
+					<h:inputSecret value="#{usuarios.confirmarPassword}"
+						required="true" id="confirmarPassword">
+					</h:inputSecret>
+					<h:message for="confirmarPassword" />
+				</h:panelGroup>
+
+				<center>
+					<h:commandButton value="#{msgs.moficiarPerfil}"
+						action="#{usuarios.modificarPerfilUsuario}">
+					</h:commandButton>
+				</center>
+			</h:panelGrid>
+
+			<h:outputText value="#{msgs[usuarios.error]}"
+				rendered="#{usuarios.error != null}" />
+		</h:form>
+	</ui:define>
+
+	<ui:define name="pie">
+		<ui:include src="/snippets/pie-idiomas-casa.xhtml" />
+	</ui:define>
+
+</ui:composition>

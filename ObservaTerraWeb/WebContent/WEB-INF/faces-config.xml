@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+
+		<navigation-case>
+			<from-outcome>asignarProfesoresAsignatura</from-outcome>
+			<to-view-id>/asignarProfesoresAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>activacionUsuarios</from-outcome>
+			<to-view-id>/activacionUsuarios.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>mofidicarPerfilRegistrado</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoAdministrador.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>mantenimientoAsignaturas</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>mantenimientoUsuarios</from-outcome>
+			<to-view-id>/mantenimientoUsuarios.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>modificarAsignatura</from-outcome>
+			<to-view-id>/modificarAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>nuevaAsignatura</from-outcome>
+			<to-view-id>/nuevaAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>usuariosDesactivados</from-outcome>
+			<to-view-id>/usuariosDesactivados.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>usuariosActivados</from-outcome>
+			<to-view-id>/usuariosActivados.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>asignarProfesoresAsignatura</from-outcome>
+			<to-view-id>/asignarProfesoresAsignatura.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<!-- PÚBLICO -->
+
+
+
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.listadoConProfesores}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/asignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.listadoConAsignaturas}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/profesores.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{login.login}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/asignaturas.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.buscarAsignaturas}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/asignaturas.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/profesores.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.buscarProfesores}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/profesores.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/registro.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.registrarUsuarioNuevo}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/exitoRegistro.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.registrarUsuarioNuevo}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/errorRegistro.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<!-- ADMISNISTRADOR -->
+
+
+
+	<navigation-rule>
+		<from-view-id>/usuarioAdministrador.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.listadoConProfesores}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.listarAsignarProfesoresAsignatura}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/listarAsignarProfesoradoAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.listarAsignarAlumnosAsignatura}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/listarAsignarAlumnadoAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfil}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoAdministrador.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/listarAsignarProfesoradoAsignatura.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.buscarProfesoresPorAsignatura(asignatura)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/asignarProfesor.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/asignarProfesor.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.confirmarAsignacionProfesorado(profesor)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/listarAsignarProfesoradoAsignatura.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/listarAsignarAlumnadoAsignatura.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.buscarAlumnosPorAsignatura(asignatura)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/asignarAlumno.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/asignarAlumno.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.confirmarAsignacionAlumnado(alumno)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/listarAsignarAlumnadoAsignatura.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/modificarPerfilRegistradoAdministrador.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuarioAdministrador.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoAdministrador.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/mantenimientoUsuarios.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.listarUsuariosInactivos}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuariosDesactivados.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.listarUsuariosActivos}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuariosActivados.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/usuariosDesactivados.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.buscarUsuariosInactivos}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuariosDesactivados.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.formularioModificarPerfilUsuarioActivacionUsuarioDesactivado(usuario)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/formularioModificarUsuarioActivacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/usuariosActivados.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.buscarUsuariosActivos}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuariosActivados.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.formularioModificarPerfilUsuarioActivacionUsuarioActivado(usuario)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/formularioModificarUsuarioActivacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/formularioModificarUsuarioActivacion.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoUsuarios.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/formularioModificarUsuarioActivacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/mantenimientoAsignaturas.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.buscarAsignaturas}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{asignaturas.mostrarModificarAsignatura(asignatura)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/modificarAsignatura.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{asignaturas.eliminarAsignatura(asignatura)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{asignaturas.eliminarAsignatura(asignatura)}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>nuevaAsignatura</from-outcome>
+			<to-view-id>/nuevaAsignatura.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/nuevaAsignatura.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.nuevaAsignatura}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modificarAsignatura.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{asignaturas.modificarAsignatura}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/mantenimientoAsignaturas.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{asignaturas.modificarAsignatura}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/errorModificarAsignatura.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<!-- PROFESOR -->
+
+
+
+	<navigation-rule>
+		<from-view-id>/usuarioProfesor.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfil}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoProfesor.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{usuarios.listarCalificarAlumnos}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/calificarAlumnos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modificarPerfilRegistradoProfesor.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuarioProfesor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoProfesor.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/calificarAlumnos.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.formularioCalificarAlumno(alum, asignatura)}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/formularioCalificarAlumno.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/formularioCalificarAlumno.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.confirmarCalificar}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/calificarAlumnos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<!-- ALUMNO -->
+
+
+	<navigation-rule>
+		<from-view-id>/usuarioAlumno.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.consultarExpediente}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/expediente.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfil}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoAlumno.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/modificarPerfilRegistradoAlumno.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>EXITO</from-outcome>
+			<to-view-id>/usuarioAlumno.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{usuarios.modificarPerfilUsuario}</from-action>
+			<from-outcome>FRACASO</from-outcome>
+			<to-view-id>/modificarPerfilRegistradoAlumno.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<application>
+
+		<resource-bundle>
+			<base-name>messages</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+
+	</application>
+
+</faces-config>

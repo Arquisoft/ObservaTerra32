@@ -1,0 +1,55 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/template-general.xhtml">
+
+	<ui:define name="titulo">
+    	#{msgs.tituloOpciones}
+	</ui:define>
+
+	<ui:define name="menu">
+		<h:form id="form-menu">
+			<h:commandLink value="#{msgs.listadoAsignaturas}"
+				action="#{asignaturas.listadoConProfesores}" />
+			<h:commandLink value="#{msgs.listadoProfesores}"
+				action="#{usuarios.listadoConAsignaturas}" />
+			<h:commandLink value="#{msgs.registroNuevoUsuario}" action="registro" />
+		</h:form>
+	</ui:define>
+
+	<ui:define name="cuerpo">
+		<h:form id="form-principal">
+			<center>
+				<h1>#{msgs.bienvenida}</h1>
+				<br />
+				<h2>#{msgs.login}</h2>
+			</center>
+			<h:panelGrid columns="2" styleClass="formTable">
+  				#{msgs.usuario} 
+  				<h:panelGroup>
+					<h:inputText value="#{login.usuario}" required="true" />
+				</h:panelGroup>
+
+				#{msgs.password} 
+				<h:panelGroup>
+					<h:inputSecret value="#{login.password}" required="true" />
+				</h:panelGroup>
+				<center>
+					<h:commandButton value="#{msgs.login}" action="#{login.login}">
+						<f:ajax execute="@form" render="@form :form-pie :form-menu" />
+					</h:commandButton>
+				</center>
+			</h:panelGrid>
+			<br />
+			<h:outputText value="#{msgs[login.error]}"
+				rendered="#{login.error != null}" />
+
+		</h:form>
+	</ui:define>
+
+	<ui:define name="pie">
+		<ui:include src="/snippets/pie-idiomas.xhtml" />
+	</ui:define>
+
+</ui:composition>
