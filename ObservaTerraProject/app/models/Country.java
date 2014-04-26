@@ -16,15 +16,13 @@ public class Country extends Model {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	public String code;
+	public String idCountry;
 
 	public String name;
 
-	public Country(String code, String name) {
-		this.code = code;
-		this.name = name;
-	}
+	public Long population;
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static Finder<String, Country> find = new Finder(String.class,
 			Country.class);
 
@@ -38,8 +36,8 @@ public class Country extends Model {
 		}
 	}
 
-	public static void remove(String code) {
-		find.ref(code).delete();
+	public static void remove(String idCountry) {
+		find.ref(idCountry).delete();
 	}
 
 	public static void deleteAll() {
@@ -51,8 +49,8 @@ public class Country extends Model {
 		return find.where().eq("name", name).findUnique();
 	}
 
-	public static Country findByCode(String code) {
-		return find.byId(code);
+	public static Country findByCode(String idCountry) {
+		return find.byId(idCountry);
 	}
 	
 	public static JsonNode toJson(Country country) {

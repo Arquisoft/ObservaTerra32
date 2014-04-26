@@ -16,7 +16,7 @@ public class Observation extends Model {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	public Long id;
+	public Long idOservation;
 
 	@Required
 	public Double obsValue;
@@ -27,6 +27,15 @@ public class Observation extends Model {
 	@ManyToOne
 	public Indicator indicator;
 
+	public String area;
+
+	public String measure;
+
+	public String provider;
+
+	public String time;
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static Finder<Long, Observation> find = new Finder(Long.class,
 			Observation.class);
 
@@ -90,6 +99,70 @@ public class Observation extends Model {
 		Country c = Country.find.byId(countryCode);
 		List<Observation> result = find.where().eq("country", c).findList();
 		return result;
+	}
+
+	public Long getIdOservation() {
+		return idOservation;
+	}
+
+	public void setIdOservation(Long idOservation) {
+		this.idOservation = idOservation;
+	}
+
+	public Double getObsValue() {
+		return obsValue;
+	}
+
+	public void setObsValue(Double obsValue) {
+		this.obsValue = obsValue;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+
+	public Indicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(Indicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public String getMeasure() {
+		return measure;
+	}
+
+	public void setMeasure(String measure) {
+		this.measure = measure;
+	}
+
+	public String getProvider() {
+		return provider;
+	}
+
+	public void setProvider(String provider) {
+		this.provider = provider;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 }
