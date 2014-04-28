@@ -101,14 +101,14 @@ article, figcaption, figure, footer, header, hgroup, nav, section {
 }
 
 body {
-	background: #212121 url("../images/fondo.jpg");
+	background: #212121 url("images/fondo.jpg");
 	color: #FFF;
-	font-family: "Chalet";
+	font-family: "nava";
 	font-size: 16px;	
 }
 
 main {
-	background:#464744;
+	background:#151515;
 	max-width: 1000px;
 	margin: 0.5em auto;
 	padding-top: 1em;
@@ -118,14 +118,11 @@ main {
 }
 
 #hd img {
-	margin-right: 1em;
+	margin-right: 0.5em;
 }
 
-#hd {
-	margin-bottom: 2em;
-}
 a {
-	color: #FFF;
+	color: #7ADF5B;
 	text-decoration: none;
 }
 
@@ -135,7 +132,7 @@ a:hover {
 
 #tit {
 	font-family: "ventilla_script-webfont";
-	font-size: 5.5em;
+	font-size: 2.5em;
 	font-weight: lighter;
 	margin-right: 0.5em;
 	margin-left: 0.5em;
@@ -162,9 +159,16 @@ a:hover {
 	filter: alpha(opacity=8);
 }
 
+h2 {
+	font-size: 0.8em;
+}
+
 h1 {	
-	margin: 0.3em;
+	font-family: "ventilla_script-webfont";
+	font-size: 7.2em;
+	color: white;
 	text-align: center;
+	font-weight: lighter;
 }
 
 h1 p {
@@ -202,6 +206,10 @@ img, video {
 	max-width: 100%;
 }
 
+#error {
+	color: red;
+	font-weight: bolder;
+}
 
 #contenedor {
 	margin: 0.5em auto;
@@ -211,44 +219,93 @@ img, video {
 }
 
 #s1 {
-	box-shadow: 0em 0em 0.1em 0.2em rgba(0, 0, 0, 0.75);
-	background: #506DAD;
+	box-shadow: 0em 0em 0.1em 0.2em rgba(199, 176, 206, 0.75);
+	background: #978E9A;
 	display: inline-block;
 	margin: 0.1em auto;
-	max-width: 1110px;
+	max-width: 860px;
 	padding: 0.25em;
 	vertical-align: top;
 	border-radius: 0.2em;
-	min-height: 1000px;
-	width: 70%;
+	min-height: 400px;
+	width: 65%;
+}
+
+label {
+	margin-bottom:1em;
+}
+
+table, tr, td
+{
+	border: 1px solid black;
+}
+
+.lista {
+	margin-left: 1em;
+	font-size: 0.85em;
+}
+
+.lista td {
+	color: black;
+}
+
+.boton {
+	padding: 0.3em;
+	font-size: 1.2em;
+	display:block;
+	margin: 1em;
+	margin-left: auto;
+	margin-right:auto;
 }
 
 aside { 
 	display: inline-block;
 	margin: 0.6em auto;
-	min-height: 990px;
+	min-height: 400px;
 	padding: 0.25em;
 	vertical-align: top;
 	margin-top: 1.7em;
 	margin-right: 0.5em;
-	width: 20%;
+	width: 30%;
 }
 
 #menu {
 	padding-top: 0.1em;
 	padding-bottom: 1.1em;
 	margin: 0.1em auto;
-	box-shadow: 0em 0em 0.1em 0.2em rgba(0, 0, 0, 0.75);
-	max-width: 210px;
-	background: #506DAD;
+	box-shadow: 0em 0em 0.1em 0.2em rgba(199, 176, 206, 0.75);
+	max-width: 265px;
+	background: #978E9A;
 	border-radius: 0.8em;
 	min-height: 290px;
 }
 
+.form {
+	margin:auto auto;
+	width:280px;
+	background: #6C7BE9;
+	opacity:0.9;
+	border: 1px solid #000000;
+    border-radius: 0.3em;
+	padding: 1.8em;
+	margin-left: 4em;
+}
+
+.form label{
+	margin-bottom: 1em;
+	display: block;
+}
+
+.input {
+	margin: auto auto;
+	margin-top:0.5em;
+	display: block;
+}
+
 #interes{
-	max-width: 210px;
-	box-shadow: 0em 0em 0.1em 0.2em rgba(0, 0, 0, 0.75);
-	background: #506DAD;
+	max-width: 960px;
+	box-shadow: 0em 0em 0.1em 0.2em rgba(199, 176, 206, 0.75);
+	background: #978E9A;
 	border-radius: 0.8em;
 	min-height: 590px;
 	margin: 1em auto;
@@ -274,12 +331,12 @@ nav li {
 
 nav a {
 	opacity: 0.9;
-	background: #F1EBDE;
+	background: #6C7BE9;
 	box-shadow: 1px 2px 3px 0px rgba(22,36,77,1);
 	border-radius: 0.2em;
-	color: #000000;
+	color: #FFF;
 	font-family: "maloire";
-	font-size: 1.4em;
+	font-size: 1.6em;
 	display: block;
 	margin: 0.1em;
 	padding: 0.4em;
@@ -291,12 +348,12 @@ nav a {
 }
 
 nav a:hover {
-	background: #FBEBC6;
-	border: 0.1em solid #000000;
+	background: #FFF;
+	border: 0.1em solid #7ADF5B;
 	border-radius: 0.2em;
 	color: #000000;
 	font-family: "maloire";
-	font-size: 1.5em;
+	font-size: 1.6em;
 	display: block;
 	-ms-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
@@ -315,6 +372,9 @@ article {
 	opacity: 0.8;
 }
 
+h3 {
+	color: #000000;
+}
 article p {
 	color: #000000;
 	font-family: "nava";
@@ -337,7 +397,7 @@ h2 {
 	color: #FFF;
 	border: 0em;
 	box-shadow: 1px 2px 3px 0px rgba(22,36,77,1);
-	font-size: 1.4em;
+	font-size: 1em;
 	border-radius: 0.3em;
 	background: #6C7BE9;
 	opacity: 0.92;
@@ -348,11 +408,11 @@ h2 {
 footer {
 	font-weight: lighter;
 	width: 92%;
-	background: url("../images/HTML5_Logo.png");
+	background: url(" images/HTML5_Logo.png");
 	min-height: 50px;
 	margin: 0.5em auto;
 	margin-top: 3em;
-	color: #FFF;
+	color: #FF541A;
 	text-align: center;
 }
 

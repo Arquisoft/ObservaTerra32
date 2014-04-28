@@ -1,68 +1,46 @@
 package controllers;
 
-import models.Country;
-import play.data.Form;
-import play.mvc.Controller;
-import play.mvc.Result;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import models.*;
 import views.html.*;
 
-import views.html.*;
+import play.Logger;
+import play.data.DynamicForm;
+import play.data.Form;
+import play.i18n.Messages;
+import play.mvc.Controller;
+import play.mvc.Http.MultipartFormData;
+import play.mvc.Http.MultipartFormData.FilePart;
+import play.mvc.Result;
+import utils.ExcelReader;
 
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render());
+        return ok(index.render(Observation.all(),Country.all(),Indicator.all()));
     }
-    
-    public static Result noticias() {
-        return ok(noticias.render());
-    }
-    
-    public static Result documentos() {
-        return ok(documentos.render());
-    }
-    
-    public static Result videos() {
-        return ok(videos.render());
-    }
-    
-    public static Result enlaces() {
-        return ok(enlaces.render());
-    }
-    
 
     public static Result showCountries() {
-        return 
-          ok(countries.render(Country.find.all()));
-    }
- 
-    public static Result showCountry(String code) {
-    	Country c = Country.find.byId(code);
-    	return ok(country.render(c));
-	}
- 
-    public static Result addCountry() {
-    	Country c = countryForm.bindFromRequest().get();
-    	c.save();
-        return 
-          redirect(routes.Application.showCountries());
-    }
- 
-    public static Result updateCountry(String code) {
-    	Country c = Country.find.byId(code);
-    	Country updated = countryForm.bindFromRequest().get(); 
-    	c.name = updated.name;
-    	c.save();
-        return 
-          redirect(routes.Application.showCountries());
-    }
- 
-    public static Result delCountry(String code) {
-    	Country c = Country.find.byId(code);
-    	c.delete();
-        return 
-          redirect(routes.Application.showCountries());
+    	return ok(country.render(Country.all(),countryForm));
     }
     
-    static Form<Country> countryForm = Form.form(Country.class); 
+    public static Result showIndicators() {
+    	return ok(indicator.render(Indicator.all(),indicatorForm));
+    }
+    
+    public static Result showObservations() {
+    	return ok(observation.render(Observation.find.all(),Country.all(),Indicator.all(),observationForm));
+    }
+    
+    public static Result bars(String indicator) {
+    	return ok(bars.render(Indicator.findByCode(indicator)));
+    }
+
+    static Form<Country>  	  countryForm     = Form.form(Country.class);
+    static Form<Indicator>    indicatorForm   = Form.form(Indicator.class);
+    static Form<Observation>  observationForm = Form.form(Observation.class);
+
 }
