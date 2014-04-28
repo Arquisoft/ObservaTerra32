@@ -1,0 +1,109 @@
+@(observations: List[Observation], countries: List[Country], indicators: List[Indicator])
+
+@import play.i18n._
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>ObservaTerra 3.2</title>
+	<meta charset="UTF-8"/> 
+	<meta name="description" content="Web de desarrollo de la asignatura ASW"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style1.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/ico_mundo.gif")">
+	<link rel="author" type="text/plain" href="humans.txt">
+	<link rel="shortcut icon" type="image/x-icon" href="images\ico_mundo.gif"/>
+	<!--[if lt IE 9]>
+		<script src="//http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<main>
+		<section id="contenedor">
+			<header id = "hd">
+			<h1>
+				<a href="index.jsp">
+					<img class="cab" src="@routes.Assets.at("images/ico_mundo.png")">
+				</a>
+				Bienvenido al Portal
+			</h1>
+		</header>
+			<aside>
+				<section id="menu">
+					<nav>
+						<ul>
+							<li><FORM>
+		<h2> Accede al portal </h2>
+								<label>Username: </label> <input type="text" name="username" size="15" class="input" /><br>
+  								<label>Password: </label> <input type="password" name="pass" size="15" class="input"/><br>
+    							<input type="submit" name="opc" value="login" class="boton"/>
+  							</FORM></li>
+						</ul>
+					</nav>
+					<p>Si no tienes una cuenta <a href="controlador?opc=registro">registrate</a></p>
+					<br>
+										<p id=error> Usuario o contraseña incorrectos </p>
+					<br><br>
+					<p><a href="controlador?opc=logout">logout</a></p>
+					
+					
+					<!--<h1>@Messages.get("Wellcome")</h1>
+					<h2>@Messages.get("list.observations")</h2>
+					
+					<h2>@Messages.get("Bar.chart")</h2>-->
+					
+					@main("ObservaTerra") {
+					}
+				</section>
+
+			</aside>
+			<section id="s1">
+				<h2> BIENVENIDOS AL PORTAL WEB </h2>
+				<article>
+					<h3>Conoce a los <a href="controlador?opc=listar">profesores</a></h3>
+					<h3>Conoce las <a href="controlador?opc=listar">asignaturas</a></h3>
+					<br> 
+					<a href="controlador?opc=miperfil">
+						<img src="@routes.Assets.at("images/mundo.jpg")">
+					</a>	
+					<h3>Mi perfil</h3>
+					<br>
+					<br><br>
+				</article>
+				<article>
+				<table>
+					<tr>	
+					<th>@Messages.get("Country")</th>
+					<th>@Messages.get("Indicator")</th>
+					<th>@Messages.get("Value")Value</th>
+					</tr>
+					<ul>
+					@for(indicator <- indicators) {
+					
+					 <li><a href="@routes.Application.bars(indicator.code)">@indicator.name</a></li>
+						
+					}
+					
+					
+					</ul>
+					
+					@for(observation <- observations) {
+						<tr>
+						<td>@observation.country.name</td>
+						<td>@observation.indicator.name</td>
+						<td>@observation.obsValue</td>
+						</tr> 
+					}
+					</table>
+				</article>
+			</section>
+		</section>
+		<footer>
+			Web diseñada y maquetada con Responsive Design por los integrantes del grupo 3.2 con HTML5 y CSS3
+		</footer>
+	</main>
+</body>
+</html>
+
